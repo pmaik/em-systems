@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Baisc Table</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="root-wrapper">
+            <div class="header">
+                <h1>Employee Management System</h1>
+                <button class="add-employee-btn">Add Employee</button>
+            </div>
+
+            <div class="employees-container">
+                <div class="employees-list-container">
+                    <h2 class="employee-heading">Employee List</h2>
+                    <div class="employees-list">
+                        <p class="employees-list-loading">
+                            Employee list is loading...
+                        </p>
+                    </div>
+                </div>
+                <div class="employees-info-container">
+                    <h2 class="employee-heading">Employee Information</h2>
+                    <div class="employees-info-loading">
+                        Employee info is loading...
+                    </div>
+                    <div class="employees-info">
+                        <img
+                            src="./profile.png"
+                            alt="Employee image"
+                            class="employee-info-image"
+                        />
+                        <h3 class="employee-info-name">Employee Name: -</h3>
+                        <p class="employee-email">Email: -</p>
+                        <p class="employee-phone">Phone: -</p>
+                        <p class="employee-salary">Salary: -</p>
+                        <p class="employee-address">Address:-</p>
+                        <p class="employee-dob">DOB: -</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-overlay">
+                <div class="add-employee-container">
+                    <p class="add-employee-text">Add a new Employee</p>
+                    <form class="add-employee-form">
+                        <div class="add-employee-name">
+                            <input
+                                type="text"
+                                name="firstName"
+                                placeholder="First Name"
+                                required
+                                class="form-input"
+                            />
+                            <input
+                                type="text"
+                                name="lastName"
+                                placeholder="Last Name"
+                                class="form-input"
+                            />
+                        </div>
+                        <input
+                            type="text"
+                            name="imageUrl"
+                            placeholder="Image Url (Optional)"
+                            class="form-input form-input-image"
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            class="form-input form-input-email"
+                        />
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone Number"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            required
+                            class="form-input form-input-phone"
+                        />
+                        <input
+                            type="number"
+                            name="salary"
+                            placeholder="Salary(per annum)"
+                            class="form-input form-input-salary"
+                        />
+                        <textarea
+                            name="address"
+                            placeholder="Address"
+                            rows="2"
+                            required
+                            class="form-input form-input-address"
+                        ></textarea>
+                        <input
+                            type="date"
+                            name="dob"
+                            max="2024-03-22"
+                            class="form-input form-input-dob"
+                            required
+                        />
+                        <button type="submit" class="form-submit-btn">
+                            Add
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

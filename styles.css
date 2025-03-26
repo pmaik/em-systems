@@ -1,0 +1,183 @@
+body {
+    padding: 10px 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-employee-btn {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: #7393b3;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.add-employee-btn:hover {
+    background-color: #6082b6;
+}
+
+.employees-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 8px;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.employees-list-container,
+.employees-info-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.employees-list-container {
+    width: 30%;
+    border-right: 1px solid gray;
+}
+
+.employees-info-container {
+    width: 70%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.employee-heading {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+    margin: 0;
+}
+
+.employee-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.employee-delete {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.selected-employee,
+.employee-name:hover {
+    background-color: lightgray;
+}
+
+.employees-list-loading,
+.employees-info-loading {
+    padding: 20px 0;
+    margin: 0;
+    /* font-size: large; */
+}
+
+.hide {
+    display: none;
+}
+
+.employees-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    visibility: hidden;
+    padding-top: 20px;
+}
+
+.employees-info > p {
+    margin: 0;
+}
+
+.employee-info-image {
+    height: 200px;
+    width: 200px;
+    margin: 0;
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    padding: 5px;
+    background-color: lightgray;
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    display: block;
+}
+
+.employee-info-name {
+    margin: 0;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+/* Add employee section */
+.add-employee-container {
+    border: 1px solid gray;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    padding: 30px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering*/
+    display: none;
+}
+
+.add-employee-text {
+    margin: 0;
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.add-employee-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.add-employee-name {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: stretch; */
+}
+
+.form-input {
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.form-submit-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: large;
+    background-color: aquamarine;
+}
+.form-submit-btn:hover {
+    background-color: aqua;
+}
+
+/* Overlay to cover the background */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
